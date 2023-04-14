@@ -7,6 +7,7 @@ import {
   faLinkedin,
   faGithub,
   faYoutube,
+  faSkype,
 } from '@fortawesome/free-brands-svg-icons'
 import {
   faHome,
@@ -19,29 +20,30 @@ import {
 import { Link, NavLink } from 'react-router-dom'
 
 const Sidebar = () => {
-  const [showNav, setShowNav] = useState(false)
+  const [showNav, setShowNav] = useState(false);
 
   return (
     <div className="nav-bar">
-      <Link className="logo" to="/" onClick={() => setShowNav(false)}>
+      <Link 
+        className="logo"
+        to="/"
+        onClick={() => setShowNav(false)}>
         <img src={LogoS} alt="Logo" />
         <img className="sub-logo" src={LogoSubtitle} alt="slobodan" />
       </Link>
       <nav className={showNav ? 'mobile-show' : ''}>
-        <NavLink
+        <NavLink 
           exact="true"
           activeclassname="active"
           to="/"
-          onClick={() => setShowNav(false)}
-        >
+          onClick={() => setShowNav(false)}>
           <FontAwesomeIcon icon={faHome} color="#4d4d4e" />
         </NavLink>
-        <NavLink
+        <NavLink 
           activeclassname="active"
           className="about-link"
           to="/about"
-          onClick={() => setShowNav(false)}
-        >
+          onClick={() => setShowNav(false)}>
           <FontAwesomeIcon icon={faUser} color="#4d4d4e" />
         </NavLink>
         <NavLink
@@ -60,18 +62,17 @@ const Sidebar = () => {
         >
           <FontAwesomeIcon icon={faEnvelope} color="#4d4d4e" />
         </NavLink>
-        <FontAwesomeIcon
+        <FontAwesomeIcon 
           onClick={() => setShowNav(false)}
           icon={faClose}
           color="#ffd700"
           size="3x"
-          className="close-icon"
-        />
+          className='close-icon' />
       </nav>
       <ul>
         <li>
           <a
-            href="https://www.linkedin.com/in/manishkhadgi/"
+            href="https://www.linkedin.com/in/slobodan-gaji%C4%87-006bb8b8/"
             target="_blank"
             rel="noreferrer"
           >
@@ -84,7 +85,7 @@ const Sidebar = () => {
         </li>
         <li>
           <a
-            href="https://github.com/manish-khadgi-dev"
+            href="https://github.com/bobangajicsm"
             target="_blank"
             rel="noreferrer"
           >
@@ -97,7 +98,7 @@ const Sidebar = () => {
         </li>
         <li>
           <a
-            href="https://www.youtube.com/channel/UC4kLCi4RWB2Iw5K2yYwBZpQ"
+            href="https://www.youtube.com/channel/UCBu5ulO4d-d47lAVybpRTkw"
             rel="noreferrer"
             target="_blank"
           >
@@ -108,14 +109,22 @@ const Sidebar = () => {
             />
           </a>
         </li>
+        <li>
+          <a href="skype:live:bobangajicsm" rel="noreferrer" target="_blank">
+            <FontAwesomeIcon
+              icon={faSkype}
+              color="#4d4d4e"
+              className="anchor-icon"
+            />
+          </a>
+        </li>
       </ul>
-      <FontAwesomeIcon
-        onClick={() => setShowNav(true)}
-        icon={faBars}
-        color="#ffd700"
-        size="3x"
-        className="hamburger-icon"
-      />
+      <FontAwesomeIcon 
+          onClick={() => setShowNav(true)}
+          icon={faBars}
+          color="#ffd700"
+          size="3x"
+          className='hamburger-icon' />
     </div>
   )
 }
