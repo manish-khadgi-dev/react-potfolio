@@ -41,8 +41,10 @@
 
     img {
       margin-left: 20px;
+      position: realtive;
+      bottom: 10px;
       opacity: 0;
-      width: 32px;
+      width: 90px;
       height: auto;
       animation: rotateIn 1s linear both;
       animation-delay: 1.4s;
@@ -106,7 +108,7 @@
 
   .logo-container {
     position: relative;
-    width: 100px;
+    width: 800px;
     height: auto;
     top: 50px;
     right: 0;
